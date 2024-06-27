@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Soft Commerce Ltd. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="NextCommerce_Core::nextcommerce_core"
+             title="Soft Commerce"
+             translate="title"
+             module="NextCommerce_Core"
+             sortOrder="55"
+             dependsOnModule="NextCommerce_Core"
+             resource="NextCommerce_Core::nextcommerce_core"/>
+        <add id="NextCommerce_Core::config"
+             title="Configuration"
+             translate="title"
+             module="NextCommerce_Core"
+             sortOrder="10"
+             parent="NextCommerce_Core::nextcommerce_core"
+             resource="NextCommerce_Core::configuration"/>
+        <add id="NextCommerce_Core::config_nextcommerce_core"
+             title="Core Settings"
+             translate="title"
+             module="NextCommerce_Core"
+             sortOrder="0"
+             parent="NextCommerce_Core::config"
+             action="adminhtml/system_config/edit/section/nextcommerce_core/"
+             resource="NextCommerce_Core::system_config"/>
+    </menu>
+</config>

@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Soft Commerce Ltd. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- global framework interfaces :: data mapping-->
+    <preference for="NextCommerce\Core\Framework\DataMap\StatusToFaMappingInterface" type="NextCommerce\Core\Framework\DataMap\StatusToFaMapping"/>
+    <preference for="NextCommerce\Core\Framework\DataMap\StatusToLabelMappingInterface" type="NextCommerce\Core\Framework\DataMap\StatusToLabelMapping"/>
+    <!-- global framework interfaces :: data storage-->
+    <preference for="NextCommerce\Core\Framework\DataStorageInterface" type="NextCommerce\Core\Framework\DataStorage"/>
+    <preference for="NextCommerce\Core\Framework\EntityDataStorageInterface" type="NextCommerce\Core\Framework\EntityDataStorage"/>
+    <preference for="NextCommerce\Core\Framework\DataStorage\OutputArrayInterface" type="NextCommerce\Core\Framework\DataStorage\OutputArray"/>
+    <preference for="NextCommerce\Core\Framework\DataStorage\OutputArrayPrintReadableInterface" type="NextCommerce\Core\Framework\DataStorage\OutputArrayPrintReadable"/>
+    <preference for="NextCommerce\Core\Framework\DataStorage\OutputHtmlInterface" type="NextCommerce\Core\Framework\DataStorage\OutputHtml"/>
+    <preference for="NextCommerce\Core\Framework\DataStorage\OutputMessageManagerInterface" type="NextCommerce\Core\Framework\DataStorage\OutputMessageManager"/>
+    <preference for="NextCommerce\Core\Framework\DataStorage\StatusPredictionInterface" type="NextCommerce\Core\Framework\DataStorage\StatusPrediction"/>
+    <preference for="NextCommerce\Core\Framework\IsAssociativeArrayInterface" type="NextCommerce\Core\Framework\IsAssociativeArray"/>
+    <preference for="NextCommerce\Core\Framework\IsMultidimensionalArrayInterface" type="NextCommerce\Core\Framework\IsMultidimensionalArray"/>
+    <preference for="NextCommerce\Core\Framework\SearchMultidimensionalArrayInterface" type="NextCommerce\Core\Framework\SearchMultidimensionalArray"/>
+    <preference for="NextCommerce\Core\Framework\String\ParseStringInterface" type="NextCommerce\Core\Framework\String\ParseString"/>
+    <!-- global framework interfaces :: DB -->
+    <preference for="NextCommerce\Core\Framework\DB\QueryResultDataTypeConverterInterface" type="NextCommerce\Core\Framework\DB\QueryResultDataTypeConverter"/>
+    <!-- global framework interfaces :: message storage -->
+    <preference for="NextCommerce\Core\Framework\MessageStorageInterface" type="NextCommerce\Core\Framework\MessageStorage"/>
+    <preference for="NextCommerce\Core\Framework\MessageStorage\OutputArrayInterface" type="NextCommerce\Core\Framework\MessageStorage\OutputArray"/>
+    <preference for="NextCommerce\Core\Framework\MessageStorage\OutputConsoleInterface" type="NextCommerce\Core\Framework\MessageStorage\OutputConsole"/>
+    <preference for="NextCommerce\Core\Framework\MessageStorage\OutputHtmlInterface" type="NextCommerce\Core\Framework\MessageStorage\OutputHtml"/>
+    <preference for="NextCommerce\Core\Framework\MessageStorage\OutputMessageManagerInterface" type="NextCommerce\Core\Framework\MessageStorage\OutputMessageManager"/>
+    <preference for="NextCommerce\Core\Framework\MessageStorage\StatusPredictionInterface" type="NextCommerce\Core\Framework\MessageStorage\StatusPrediction"/>
+    <!-- global config ::: interface | repository | management -->
+    <preference for="NextCommerce\Core\Model\Config\DateTimeLocaleInterface" type="NextCommerce\Core\Model\Config\DateTimeLocale"/>
+    <preference for="NextCommerce\Core\Model\Config\DeveloperInterface" type="NextCommerce\Core\Model\Config\Developer"/>
+    <!-- Catalog modules ::: interface | repository -->
+    <preference for="NextCommerce\Core\Model\Catalog\FileImageManagementInterface" type="NextCommerce\Core\Model\Catalog\FileImageManagement"/>
+    <preference for="NextCommerce\Core\Model\Catalog\GetCatalogCategoryDataInterface" type="NextCommerce\Core\Model\Catalog\GetCatalogCategoryData"/>
+    <preference for="NextCommerce\Core\Model\Catalog\GetConfigurableAttributeOptionsInterface" type="NextCommerce\Core\Model\Catalog\GetConfigurableAttributeOptions"/>
+    <preference for="NextCommerce\Core\Model\Catalog\GetProductAttributeDataInterface" type="NextCommerce\Core\Model\Catalog\GetProductAttributeData"/>
+    <preference for="NextCommerce\Core\Model\Catalog\IsCatalogProductSuperLinkInterface" type="NextCommerce\Core\Model\Catalog\IsCatalogProductSuperLink"/>
+    <preference for="NextCommerce\Core\Model\Catalog\MediaManagementInterface" type="NextCommerce\Core\Model\Catalog\MediaManagement"/>
+    <preference for="NextCommerce\Core\Model\Catalog\SkuStorageInterface" type="NextCommerce\Core\Model\Catalog\SkuStorage"/>
+    <!-- Customer modules :: interface | repository -->
+    <preference for="NextCommerce\Core\Model\Customer\GetCustomerRawDataInterface" type="NextCommerce\Core\Model\Customer\GetCustomerRawData"/>
+    <!-- Eav modules ::: interface | repository -->
+    <preference for="NextCommerce\Core\Model\Eav\AttributeManagementInterface" type="NextCommerce\Core\Model\Eav\AttributeManagement"/>
+    <preference for="NextCommerce\Core\Model\Eav\GetAttributeBackendTableInterface" type="NextCommerce\Core\Model\Eav\GetAttributeBackendTable"/>
+    <preference for="NextCommerce\Core\Model\Eav\GetAttributeEntityTypeDataInterface" type="NextCommerce\Core\Model\Eav\GetAttributeEntityTypeData"/>
+    <preference for="NextCommerce\Core\Model\Eav\GetAttributeEntityTypeIdInterface" type="NextCommerce\Core\Model\Eav\GetAttributeEntityTypeId"/>
+    <preference for="NextCommerce\Core\Model\Eav\GetAttributeSetByAttributeInterface" type="NextCommerce\Core\Model\Eav\GetAttributeSetByAttribute"/>
+    <preference for="NextCommerce\Core\Model\Eav\GetAttributeSetDataInterface" type="NextCommerce\Core\Model\Eav\GetAttributeSetData"/>
+    <preference for="NextCommerce\Core\Model\Eav\GetDefaultAttributeSetIdInterface" type="NextCommerce\Core\Model\Eav\GetDefaultAttributeSetId"/>
+    <preference for="NextCommerce\Core\Model\Eav\GetEavAttributeOptionValueDataInterface" type="NextCommerce\Core\Model\Eav\GetEavAttributeOptionValueData"/>
+    <preference for="NextCommerce\Core\Model\Eav\GetEntityTypeIdInterface" type="NextCommerce\Core\Model\Eav\GetEntityTypeId"/>
+    <!-- vendor module list ::: interface -->
+    <preference for="NextCommerce\Core\Model\ModuleListProviderInterface" type="NextCommerce\Core\Model\ModuleListProvider"/>
+    <!-- model source options ::: interface -->
+    <preference for="NextCommerce\Core\Model\Source\StatusInterface" type="NextCommerce\Core\Model\Source\Status"/>
+    <!-- model utilities -->
+    <preference for="NextCommerce\Core\Model\Utils\GetEntityMetadataInterface" type="NextCommerce\Core\Model\Utils\GetEntityMetadata"/>
+    <!-- Store modules ::: interface | repository -->
+    <preference for="NextCommerce\Core\Model\Store\WebsiteStorageInterface" type="NextCommerce\Core\Model\Store\WebsiteStorage"/>
+    <!-- Logger -->
+    <preference for="NextCommerce\Core\Logger\LogProcessorInterface" type="NextCommerce\Core\Logger\LogProcessor"/>
+    <type name="NextCommerce\Core\Logger\Handler\RotationSteamHandler">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    <virtualType name="NextCommerce\Core\VirtualStreamHandler" type="Magento\Framework\Logger\Handler\Base">
+        <arguments>
+            <argument name="fileName" xsi:type="string">var/log/nextcommerce/debug.log</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="NextCommerce\Core\VirtualRotationStreamHandler" type="NextCommerce\Core\Logger\Handler\RotationSteamHandler">
+        <arguments>
+            <argument name="fileName" xsi:type="string">var/log/nextcommerce/debug.log</argument>
+        </arguments>
+    </virtualType>
+    <type name="NextCommerce\Core\Logger\LogProcessor">
+        <arguments>
+            <argument name="handlers" xsi:type="array">
+                <item name="debug" xsi:type="object">NextCommerce\Core\VirtualStreamHandler</item>
+                <item name="rotation_debug" xsi:type="object">NextCommerce\Core\VirtualRotationStreamHandler</item>
+                <item name="mail" xsi:type="object">NextCommerce\Core\Logger\Handler\MailStreamHandler</item>
+            </argument>
+        </arguments>
+    </type>
+    <!-- CLI -->
+    <type name="Magento\Framework\Console\CommandListInterface">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="pub:static:clean" xsi:type="object">NextCommerce\Core\Console\Command\CleanStaticViewFiles</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
